@@ -1,0 +1,36 @@
+{
+  "name": "quasar",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "check": "tsc --noEmit && pnpm lint",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix",
+    "build": "deeplib",
+    "dev": "deeplib --watch --serve",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "^11.3.0",
+      "onFail": "download"
+    }
+  },
+  "dependencies": {
+    "bc-deeplib": "^5.0.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@stylistic/eslint-plugin": "^5.10.0",
+    "bc-stubs": "133.0.0",
+    "eslint": "^10.5.0",
+    "globals": "^17.6.0",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.61.0"
+  }
+}
