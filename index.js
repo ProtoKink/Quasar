@@ -1920,15 +1920,13 @@ var Quasar = (() => {
           Tag: "quasar",
           Description: "Quasar commands",
           Action: /* @__PURE__ */ __name(function() {
-            CommandsHelp.ShowFor(this);
+            CommandsHelp.ShowFor([this]);
           }, "Action"),
           Subcommands: [
             {
               Tag: "wardrobe",
               Action: /* @__PURE__ */ __name((args) => {
-                let target = Player;
-                if (args !== "") target = ChatRoomGetCharacter(args) ?? Player;
-                if (target === null) return;
+                const target = ChatRoomGetCharacter(args ?? "") ?? Player;
                 ChatRoomAppearanceLoadCharacter(target);
               }, "Action"),
               Arguments: [{
